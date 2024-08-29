@@ -1,0 +1,52 @@
+# Colors
+set $bg 	#0a0c10
+set $focused_bg	#26324c
+set $focused_br #2d3b59	
+
+set $black	#1d1f21
+set $green	#70b433
+set $yellow	#fba922
+set $blue	#3971ed
+set $magenta	#a36ac7
+set $cyan	#3971ed
+set $white	#9aa0a6
+
+set $red	#cc241d
+set $light_red	#d8261f
+
+set $gray	#222222
+set $light_gray	#333333
+set $text_color	#888888
+
+# Default modifier: Alt key ( left )
+set $mod  Mod1
+
+# Secondary modifier: Windows key ( left )
+set $mod2 Mod4
+
+# Terminal emulator
+set $term alacritty
+
+# xrandr screens id
+set $fst_screen eDP
+set $snd_screen HDMI-A-0
+
+# Workspaces names
+set $ws1 	"1"
+set $ws2 	"2"
+set $ws3 	"3"
+set $ws4 	"4"
+set $ws5 	"5"
+set $ws6 	"6"
+set $ws7 	"7"
+set $ws8 	"8"
+set $ws9 	"9"
+set $ws10 	"10"
+
+# Screen lock cmd
+set $lock i3lock -c 000000
+
+# Run components
+include startup.i3config
+include bindings.i3config
+include bar.i3config

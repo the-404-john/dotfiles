@@ -1,0 +1,104 @@
+# Use pactl to adjust volume in PulseAudio.
+set $refresh_i3status killall -SIGUSR1 i3status
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# Drag floating windows [ Mouse+$mod ]
+floating_modifier 	$mod
+
+# Move tiling windows via drag & drop [ left-click into title bar ]
+tiling_drag modifier	titlebar
+
+# Toggle tiling / floating mode for focused container
+bindsym $mod+space 	floating toggle
+
+# Switch focus between tiled and floating clients
+bindsym $mod+Shift+space focus mode_toggle
+
+# Start a terminal
+bindsym $mod+Return	exec $term
+
+# Start a program launcher
+bindsym $mod+d		exec --no-startup-id dmenu_run
+
+# Kill focused window
+bindsym $mod+Shift+q 	kill
+
+# Enter fullscreen mode for the focused container
+bindsym $mod+f 		fullscreen toggle
+
+# Change focus
+bindsym $mod+h 		focus left
+bindsym $mod+Left	focus left
+
+bindsym $mod+l		focus right
+bindsym $mod+Right	focus right
+
+# Move focused window
+bindsym $mod+Shift+h 		move left
+bindsym $mod+Shift+Left 	move left
+
+bindsym $mod+Shift+l		move right
+bindsym $mod+Shift+Right 	move right
+
+# Switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# Power settings
+bindsym $mod2+l exec --no-startup-id $lock
+bindsym $mod2+s exec --no-startup-id $lock && systemctl suspend
+bindsym $mod2+h exec --no-startup-id systemctl poweroff
+bindsym $mod2+r exec --no-startup-id systemctl reboot
+
+# Reload the configuration file
+bindsym $mod+Shift+c	reload
+
+# Restart i3 inplace
+bindsym $mod+Shift+r	restart
+
+# Exit i3 ( logs you out of your X session )
+bindsym $mod+Shift+e 	exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# Resize window
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        bindsym h 		resize shrink 	width  10 px or 10 ppt
+        bindsym Left 		resize shrink 	width  10 px or 10 ppt
+        
+	bindsym l	 	resize grow 	width  10 px or 10 ppt
+	bindsym Right 		resize grow 	width  10 px or 10 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r 		mode "resize"
