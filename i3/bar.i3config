@@ -2,24 +2,24 @@
 # finds out, if available)
 
 bar {
-	font pango:FontAwesome 11
-	
-	mode dock
-	hidden_state hide
+    font pango:FontAwesome 11
 
-	status_command i3status
-	
-	strip_workspace_numbers no		
-	
-	colors {
-		background 	$bg
-		statusline	$text_color
-		separator	$text_color
+    mode dock
+    hidden_state hide
 
-		# class			border		background 	text color
-		focused_workspace       $focused_bg	$focused_bg 	$text_color
-		active_workspace 	$light_gray	$gray		$text_color
-		inactive_workspace      $light_gray	$gray	 	$text_color
-		urgent_workspace	$light_red	$red		$text_color
-	}
+    status_command i3status
+
+    strip_workspace_numbers no
+
+    colors {
+        background  $bg
+        statusline  $text_color
+        separator   $text_color
+
+        # class             border      background  text color
+        focused_workspace   $focused_bg $focused_bg $text_color
+        active_workspace    $light_gray $gray       $text_color
+        inactive_workspace  $light_gray $gray       $text_color
+        urgent_workspace    $light_red  $red        $text_color
+    }
 }
