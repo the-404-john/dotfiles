@@ -23,7 +23,6 @@ autoload -Uz compinit && compinit
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 bindkey "^[[3~"   delete-char
-bindkey "^B"      beginning-of-line
 
 # tab + space
 # bindkey "  " autosuggest-accept
@@ -46,20 +45,18 @@ zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"
 # zstyle ":completion:*" matcher-list "m:{a-z}={A-Za-z}"
 # zstyle ":completion:*" menu no
 
-export login="" # Fill your login
-
 # Aliases
 alias ls="ls --group-directories-first --color=auto"
-alias grep="grep --color=auto"
-alias ll="ls --group-directories-first -lh"
+alias la="ls -a"
+alias ll="ls -lh"
 alias gs="git status"
-alias aisa="ssh ${login}@aisa.fi.muni.cz"
+alias grep="grep --color=auto"
+alias aisa='ssh -X xlogin@aisa.fi.muni.cz'
 alias vim="nvim"
 
-scpaisa() {
-    local dest="$2"
-    [[ $dest != */ ]] && dest="$dest/"
-    scp -r "${xlogin}@aisa.fi.muni.cz:/home/${xlogin}/$1" "$dest"
-}
+# Shell intergrations
+# eval "$(fzf --zsh)"
 
-PROMPT='[%n@%m %B%F{blue}%1~%f%b]$ '
+PROMPT='[%B%F{green}%n@%m%f%b %B%F{blue}%1~%f%b]$ '
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"

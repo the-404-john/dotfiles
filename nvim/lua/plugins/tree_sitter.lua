@@ -14,11 +14,12 @@ local M = {
 
 M.config = function()
     require("nvim-treesitter.configs").setup({
-        ensure_installed = { "asm", "c", "cpp", "c_sharp", "cmake", "make",
+        ensure_installed = { "asm", "c", "cpp", "c_sharp", "rust", "zig",
+                             "cmake", "make",
                              "python", "bash", "lua", "luadoc", "vim", "vimdoc",
                              "haskell",
                              "html", "css",
-                             "query", "markdown", "markdown_inline" },
+                             "json", "query", "markdown", "markdown_inline" },
 
         sync_install = false,
         auto_install = true,
@@ -37,42 +38,6 @@ M.config = function()
         },
 
         autopairs = { enable = true },
-
-        incremental_selection = {
-            enable = true,
-            kaymaps = {
-                init_selection = " ss",
-                node_incremental = "<leader>si",
-                scope_incremental = "<leader>sc",
-                node_decremental = "<leader>sd",
-            },
-        },
-
-        refactor = {
-            highlight_definitions = {
-                enable = true,
-            },
-
-            smart_rename = {
-                enable = true,
-                keymaps = {
-                    smart_rename = "<Leader>rn",
-                },
-            },
-        },
-
-        textobjects = {
-            select = {
-                enable = true,
-                lookahead = true,
-                keymaps = {
-                    ["af"] = "@function.outer",
-                    ["if"] = "@function.inner",
-                    ["ac"] = "@class.outer",
-                    ["ic"] = "@class.inner",
-                },
-            },
-        },
     })
 end
 

@@ -8,20 +8,45 @@ foreground = '#f0f3f6'
 
 [colors.normal]
 black   = '#1d1f21'
-red     = '#cc241d'
-green   = '#70b433'
-yellow  = '#fba922'
-blue    = '#3971ed'
-magenta = '#a36ac7'
-cyan    = '#3971ed'
-white   = '#9aa0a6'
+red     = '#f38ba8'
+green   = '#a6e3a1'
+yellow  = '#f9e2af'
+blue    = '#89b4fa'
+magenta = '#f5c2e7'
+cyan    = '#74c7ec'
+white   = '#a6adc8'
 
 [colors.bright]
 black   = '#969896'
-red     = '#cc241d'
-green   = '#70b433'
-yellow  = '#fba922'
-blue    = '#3971ed'
-magenta = '#a36ac7'
-cyan    = '#3971ed'
-white   = '#9aa0a6'
+red     = '#f38ba8'
+green   = '#a6e3a1'
+yellow  = '#f9e2af'
+blue    = '#89b4fa'
+magenta = '#f5c2e7'
+cyan    = '#74c7ec'
+white   = '#a6adc8'
+
+[keyboard]
+[[keyboard.bindings]]
+key    = "K"
+mods   = "Control"
+action = "ScrollLineUp"
+mode   = "~AppCursor"
+
+[[keyboard.bindings]]
+key    = "J"
+mods   = "Control"
+action = "ScrollLineDown"
+mode   = "~AppCursor"
+
+[[keyboard.bindings]]
+key    = "F"
+mods   = "Control"
+action = "ScrollPageDown"
+mode   = "~AppCursor"
+
+[[keyboard.bindings]]
+key    = "B"
+mods   = "Control"
+action = "ScrollPageUp"
+mode   = "~AppCursor"

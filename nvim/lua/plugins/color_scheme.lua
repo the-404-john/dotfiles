@@ -64,7 +64,7 @@ M.config = function()
         end
     })
 
-    c.colorscheme 'catppuccin-mocha'
+    c.colorscheme "catppuccin-mocha"
 end
 
 return M

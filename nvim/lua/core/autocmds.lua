@@ -21,7 +21,9 @@ api.nvim_create_autocmd("BufWritePre", {
 
     pattern = "*",
     callback = function()
+        local pos = api.nvim_win_get_cursor(0)
         c [[retab]]
+        api.nvim_win_set_cursor(0, pos)
     end
 })
 
@@ -30,6 +32,8 @@ api.nvim_create_autocmd("BufWritePre", {
 
     pattern = "*",
     callback = function()
+        local pos = api.nvim_win_get_cursor(0)
         c [[%s/\s\+$//e]]
+        api.nvim_win_set_cursor(0, pos)
     end
 })

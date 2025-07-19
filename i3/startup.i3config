@@ -3,34 +3,38 @@ font pango: FontAwesome 9
 
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
-exec_always --no-startup-id dex --autostart --environment i3
+exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec_always --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -e -k --nofork
 
 # NetworkManager 'applet' is a desktop environment-independent system tray GUI
-exec_always --no-startup-id nm-applet
+exec --no-startup-id nm-applet
 
 # Keyboard settings
-exec_always --no-startup-id numlockx on
+exec --no-startup-id numlockx on
 exec_always --no-startup-id setxkbmap -layout us,sk -variant ,qwerty -option 'grp:win_space_toggle'
 
 # Start screen-shot utility
-exec_always --no-startup-id flameshot
+exec --no-startup-id flameshot
 
 # Background settings
 exec --no-startup-id hsetroot -solid $bg
 
-# Screen set-up
-exec_always xautolock -detectsleep -time 15 -locker "$lock && systemctl suspend"
+# Pop-up messages
+exec --no-startup-id i3-msg border none
 
-exec --no-startup-id redshift
+# Screen power saving
+exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms
+exec --no-startup-id xset s noblank
+# exec xautolock -detectsleep -time 15 -locker "$lock && systemctl suspend"
 
 # class                 border      backgr.     text
 client.focused          $focused_br $focused_bg $text_color
-client.focused_inactive $light_gray $gray       $text_color
-client.unfocused        $light_gray $gray       $text_color
+client.focused_inactive $bg         $bg         $text_color
+client.unfocused        $bg         $bg         $text_color
 client.urgent           $light_red  $red        $text_color
 client.placeholder      $bg         $bg         $text_color
 
@@ -38,8 +42,6 @@ client.background       $bg
 
 # Window title bar
 new_window none
-for_window [floating] border normal
-for_window [tiling]   border none
 
-exec --no-startup-id i3-msg 'workspace 2; exec org.mozilla.firefox'
+exec --no-startup-id i3-msg 'workspace 2; exec firefox'
 exec --no-startup-id i3-msg 'workspace 1; exec alacritty'

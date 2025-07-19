@@ -46,8 +46,7 @@ o.foldlevelstart = 50
 -- Scrolling
 o.wrap = false
 
--- Copy
-o.clipboard = "unnamedplus"
+-- Row
 o.cursorline = true
 o.cursorlineopt = "number"
 
@@ -61,3 +60,6 @@ o.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Swaps
 vim.o.swapfile = false
+
+-- Start screen
+-- o.shortmess:append("I")

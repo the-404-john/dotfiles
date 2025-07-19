@@ -6,7 +6,10 @@ require("core.autocmds")
 
 plugin("plugins.color_scheme")
 plugin("plugins.color_comments")
+plugin("plugins.colorizer")
 plugin("plugins.telescope")
 plugin("plugins.tree_sitter")
+plugin("plugins.accelerated")
+plugin("plugins.lsp")
 
 require("core.lazy")
