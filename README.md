@@ -24,8 +24,9 @@ This repository contains my personal configuration files for setting up a Unix-b
   - Customizations: Aliases | Keybindings.
 
 ## Installation
-> ⚠️ Warning: These dotfiles are tailored for personal use. Please review and adapt them before applying to your system.Clone the repository:
+> ⚠️ Warning: These dotfiles are tailored for personal use. Please review and adapt them before applying to your system.
 
+Clone the repository:
 ```bash
-git clone https://github.com/yourusername/dotfiles.git ~/.config
+git clone https://github.com/the-404-john/dotfiles ~/.config
 cd ~/.config
