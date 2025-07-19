@@ -12,16 +12,16 @@ This repository contains my personal configuration files for setting up a Unix-b
   - Customizations: Color scheme | Keybindings | Layout tweaks | Scripts.
 
 - **Alacritty** (`~/.config/alacritty`)
-  – Description: A GPU-accelerated terminal emulator.
+  - Description: A GPU-accelerated terminal emulator.
   - Customizations: Colors scheme | Keybindings.
 
 - **Autorandr** (`~/.config/autorandr`)
-  – Description: Lightweight utility for automatic management of display configurations.
+  - Description: Lightweight utility for automatic management of display configurations.
   - Customizations: Display profiles.
 
 - **Zsh** (`~/.zshrc`)
   - Description: A powerful, enhanced version of the Bourne shell.
-  – Customizations: Aliases | Keybindings.
+  - Customizations: Aliases | Keybindings.
 
 ## Installation
 > ⚠️ Warning: These dotfiles are tailored for personal use. Please review and adapt them before applying to your system.Clone the repository:
