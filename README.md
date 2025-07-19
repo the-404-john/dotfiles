@@ -5,7 +5,7 @@ This repository contains my personal configuration files for setting up a Unix-b
 
 - **Alacritty** (`~/.config/alacritty`)
   - Description: A GPU-accelerated terminal emulator.
-  - Customizations: Colors scheme | Keybindings.
+  - Customizations: Color scheme | Keybindings.
 
 - **Autorandr** (`~/.config/autorandr`)
   - Description: Lightweight utility for automatic management of display configurations.
@@ -21,7 +21,11 @@ This repository contains my personal configuration files for setting up a Unix-b
 
 - **Neovim** (`~/.config/nvim`)
   - Description: A modern, highly efficient terminal text editor.
-  - Customizations: Colors scheme | Keybindings | Auto-commands.
+  - Customizations: Color scheme | Keybindings | Auto-commands.
+
+- **Rofi** (`~/.config/rofi`)
+  - Description: Fast and customizable application launcher.
+  - Customizations: Color scheme | Keybindings.
 
 - **Zsh** (`~/.zshrc`)
   - Description: A powerful, enhanced version of the Bourne shell.
