@@ -3,14 +3,6 @@ This repository contains my personal configuration files for setting up a Unix-b
 
 ## Contents
 
-- **Neovim** (`~/.config/nvim`)
-  - Description: A modern, highly efficient terminal text editor.
-  - Customizations: Colors scheme | Keybindings | Auto-commands.
-
-- **i3 Window Manager** (`~/.config/i3`)
-  - Description: A tiling window manager (X11 design).
-  - Customizations: Color scheme | Keybindings | Layout tweaks | Scripts.
-
 - **Alacritty** (`~/.config/alacritty`)
   - Description: A GPU-accelerated terminal emulator.
   - Customizations: Colors scheme | Keybindings.
@@ -18,6 +10,18 @@ This repository contains my personal configuration files for setting up a Unix-b
 - **Autorandr** (`~/.config/autorandr`)
   - Description: Lightweight utility for automatic management of display configurations.
   - Customizations: Display profiles.
+
+- **Flameshot** (`~/.config/flameshot`)
+  - Description: Easy-to-use screenshot tool.
+  - Customizations: Color scheme
+
+- **i3 Window Manager** (`~/.config/i3`)
+  - Description: A tiling window manager (X11 design).
+  - Customizations: Color scheme | Keybindings | Layout tweaks | Scripts.
+
+- **Neovim** (`~/.config/nvim`)
+  - Description: A modern, highly efficient terminal text editor.
+  - Customizations: Colors scheme | Keybindings | Auto-commands.
 
 - **Zsh** (`~/.zshrc`)
   - Description: A powerful, enhanced version of the Bourne shell.
@@ -29,4 +33,5 @@ This repository contains my personal configuration files for setting up a Unix-b
 Clone the repository:
 ```bash
 git clone https://github.com/the-404-john/dotfiles ~/.config
+cp ~/.config/zsh/zshrc ~/.zshrc
 cd ~/.config
