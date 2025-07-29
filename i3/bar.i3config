@@ -7,7 +7,7 @@ bar {
     mode dock
     hidden_state hide
 
-    status_command i3status
+    status_command i3status --config ~/.config/i3status/config
 
     strip_workspace_numbers no
 

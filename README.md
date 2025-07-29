@@ -15,7 +15,7 @@ This repository contains my personal configuration files for setting up a Unix-b
   - Description: Easy-to-use screenshot tool.
   - Customizations: Color scheme
 
-- **i3 Window Manager** (`~/.config/i3`)
+- **i3 Window Manager** (`~/.config/i3` | `~/.config/i3status`)
   - Description: A tiling window manager (X11 design).
   - Customizations: Color scheme | Keybindings | Layout tweaks | Scripts.
 
@@ -32,7 +32,8 @@ This repository contains my personal configuration files for setting up a Unix-b
   - Customizations: Aliases | Keybindings.
 
 ## Installation
-> ⚠️ Warning: These dotfiles are tailored for personal use. Please review and adapt them before applying to your system.
+[!WARNING]
+> These dotfiles are tailored for personal use. Please review and adapt them before applying to your system.
 
 Clone the repository:
 ```bash
